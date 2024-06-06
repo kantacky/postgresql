@@ -1,18 +1,21 @@
 # PostgreSQL
 
 ```
-docker run \
+docker \
+  run \
   --rm \
   --name postgresql \
   -e POSTGRES_PASSWORD=postgres \
   -v ./data:/var/lib/postgresql/data \
-  -v ./ssl/ca.crt:/var/lib/postgresql/ca.crt \
-  -v ./ssl/server.crt:/var/lib/postgresql/server.crt \
-  -v ./ssl/server.key:/var/lib/postgresql/server.key \
   -p 5432:5432 \
   -d \
   postgres:16
 ```
+
+## SSL/TLS
+- data/ca.crt
+- data/server.crt
+- data/server.key
 
 ## Configuration
 ### `data/postgresql.conf`
