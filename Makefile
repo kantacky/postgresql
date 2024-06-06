@@ -1,7 +1,7 @@
 .PHONY: run
 
 run:
-	docker \
+	@docker \
 		run \
 		--rm \
 		--name postgresql \
