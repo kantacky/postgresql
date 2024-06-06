@@ -6,7 +6,9 @@ docker run \
   --name postgresql \
   -e POSTGRES_PASSWORD=postgres \
   -v ./data:/var/lib/postgresql/data \
-  -v ./ssl:/var/lib/postgresql/ssl \
+  -v ./ssl/ca.crt:/var/lib/postgresql/ca.crt \
+  -v ./ssl/server.crt:/var/lib/postgresql/server.crt \
+  -v ./ssl/server.key:/var/lib/postgresql/server.key \
   -p 5432:5432 \
   -d \
   postgres:16
@@ -19,13 +21,13 @@ docker run \
 + ssl = on
 
 - #ssl_ca_file = ''
-+ ssl_ca_file='ssl/ca.crt'
++ ssl_ca_file='ca.crt'
 
 - #ssl_cert_file = 'server.crt'
-+ ssl_cert_file='ssl/server.crt'
++ ssl_cert_file='server.crt'
 
 - #ssl_ca_file = 'server.key'
-+ ssl_key_file='ssl/server.key'
++ ssl_key_file='server.key'
 
 - #ssl_min_protocol_version = 'TLSv1.2'
 + ssl_min_protocol_version = 'TLSv1.3'
