@@ -9,7 +9,7 @@ docker run \
   -v ./ssl:/var/lib/postgresql/ssl \
   -p 5432:5432 \
   -d \
-  postgres
+  postgres:16
 ```
 
 ## Configuration
