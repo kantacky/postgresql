@@ -21,7 +21,7 @@ docker run \
 - #ssl_ca_file = ''
 + ssl_ca_file='ssl/ca.crt'
 
-- #ssl_cert_file = ''
+- #ssl_cert_file = 'server.crt'
 + ssl_cert_file='ssl/server.crt'
 
 - #ssl_ca_file = 'server.key'
