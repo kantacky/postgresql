@@ -6,9 +6,9 @@ make run
 ```
 
 ## SSL/TLS
-- data/ca.crt
-- data/server.crt
-- data/server.key
+- `data/ca.crt`
+- `data/server.crt`
+- `data/server.key`
 
 ## Configuration
 ### `data/postgresql.conf`
